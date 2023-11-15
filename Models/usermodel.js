@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
 
-//create schema
+//create schema ( on l'a divisé sur deux étapes)
 const schema=mongoose.Schema
 
 const userSchema=new schema({
@@ -20,5 +20,5 @@ const userSchema=new schema({
         required:true
     }
 })
-//export
+//export  (user remplace user schema)
 module.exports =mongoose.model("user",userSchema)

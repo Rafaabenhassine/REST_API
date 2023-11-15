@@ -1,7 +1,6 @@
 const mongoose=require("mongoose")
 
 //function Connect
-
 const connect =async()=>{
     try {
         console.log("initialisation")

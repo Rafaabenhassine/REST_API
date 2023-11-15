@@ -2,6 +2,7 @@ const  jwt = require("jsonwebtoken");
 const user = require("../Models/usermodel");
 const bcrypt = require("bcrypt");
 
+//register
 exports.register = async (req, res) => {
   try {
     const { username, email, password, phone } = req.body;
@@ -19,6 +20,7 @@ exports.register = async (req, res) => {
       res.status(400).send({ msg: "uszrname already exists" });
     }
   } catch (error) {
+    // si register a echoué affiche error
     res.status(500).send({ msg: "cannot register ", error });
   }
 };

@@ -3,12 +3,11 @@ const connect = require("./config/connectDB")
 
 //create instance
 const app=express()
-// middleware
 
+// middleware
 app.use(express.json())
 
 //require dotenv
-
 require('dotenv').config()
 
 //connecting to DB
@@ -24,5 +23,5 @@ app.listen(PORT, (error)=>{
     :console.log(`server is running on PORT ${PORT}`)
 })
 
-
+//require routes
 app.use("/api/users",require('./Routes/userroute'))
